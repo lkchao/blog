@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+<style>
+body { font-size: 18px; max-width: 44em; margin: 2em auto; padding: 0 1em; line-height: 1.5; }
+h1 { line-height: 1.2; }
+h2 { margin-top: 2em; }
+h3 { font-size: 1em; margin: 1.2em 0 0; }
+h3 + p { margin-top: 0.2em; }
+hr { margin: 2em 0; border: 0; border-top: 1px solid #ccc; }
+</style>
+</head>
+<body>
+<p><a href="{{ '/' | relative_url }}">{{ site.title }}</a></p>
+{% if page.date %}
+<h1>{{ page.title }}</h1>
+<p>{{ page.date | date: "%Y-%m-%d" }}</p>
+{% endif %}
+{{ content }}
+</body>
+</html>

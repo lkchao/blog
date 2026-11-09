@@ -1,0 +1,7 @@
+title: lkchao's blog
+baseurl: /blog
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
